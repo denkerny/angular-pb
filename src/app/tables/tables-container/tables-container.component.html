@@ -1,0 +1,30 @@
+
+<div class="wrapper-container">
+  <div fxLayout fxLayoutAlign="center">
+    <h1 class="mat-display-1">Sport Tables</h1>
+  </div>
+  <div class="table-wrapper"
+      fxLayout
+      fxFill
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.sm="space-between stretch"
+      fxLayoutAlign.xs="center"
+      fxLayoutGap="0.5%"
+      fxLayoutGap.sm="2%"
+      >
+    <div fxFlex="30%" *ngFor="let table of tables$ | async" >
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ table.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-table [table]="table"></app-table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+ 
