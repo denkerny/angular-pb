@@ -4,7 +4,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { ApisModule } from '../apis/apis.module';
+
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { ApisModule } from '../apis/apis.module';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    ScrollToModule.forRoot()
   ],
   declarations: [NavigationComponent],
   exports: [NavigationComponent]

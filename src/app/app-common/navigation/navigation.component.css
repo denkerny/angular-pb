@@ -3,3 +3,8 @@
    Every toolbar row uses a flexbox row layout. */
    flex: 1 1 auto;
  }
+ button{
+  font-family: 'Titan One', cursive;
+  text-align: center;
+  color: black
+ }

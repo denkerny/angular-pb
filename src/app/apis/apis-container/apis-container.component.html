@@ -1,5 +1,23 @@
-<div id="second">
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem nisi aliquid at sunt aspernatur doloribus soluta dolor voluptate, laborum neque adipisci eius totam provident odit repellendus, quisquam quas deserunt similique!
-  </p>
+<div id="my-apis" class="apis-wrapper" fxLayout="column">
+    <div fxLayout fxLayoutAlign="center">
+        <h1 class="mat-display-1">Job</h1>
+    </div>
+    <div fxLayout="row" 
+         fxLayout.sm="column" 
+         fxLayout.xs="column"
+         fxLayoutAlign="end center"
+         fxLayoutAlign.sm="center"
+         fxLayoutAlign.xs="space-around"
+         fxLayoutGap="2%">
+        <div class="mat-card-parent" fxFlex="35%">
+            <mat-card>
+                <mat-card-content>
+                        <mat-card-title>{{ now }} (sort with table head)</mat-card-title>
+                    <app-api-p24-currency></app-api-p24-currency>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div> 
+
 </div>
+

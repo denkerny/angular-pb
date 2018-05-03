@@ -1,15 +1,21 @@
 <mat-toolbar color="primary">
 
-  <button mat-button routerLink="/">
+  <button mat-button ngx-scroll-to 
+  [ngx-scroll-to-offset]="50">
     <mat-icon>home</mat-icon> 
   </button>
+  <button mat-button [matMenuTriggerFor]="theme">Theme</button>
+  <mat-menu #theme>
+    <button mat-menu-item (click)="changeTheme('')">Default</button>
+    <button mat-menu-item (click)="changeTheme('theme')">Green</button>
+  </mat-menu>
 
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button mat-button routerLink="/products">About me</button>
-      <button mat-button routerLink="/dashboard">Sport Tables</button>
-      <button mat-button routerLink="/dashboard">APIs</button>
+      <button mat-button [ngx-scroll-to]="'#my-about'">About me</button>
+      <button mat-button [ngx-scroll-to]="'#my-sports'">Sport Tables</button>
+      <button mat-button [ngx-scroll-to]="'#my-apis'">APIs</button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
    <mat-icon>dehaze</mat-icon>
@@ -17,7 +23,7 @@
 
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/products">About me</button>
-  <button mat-menu-item routerLink="/dashboard">Sport Tables</button>
-  <button mat-menu-item >APIs</button>
+  <button mat-menu-item [ngx-scroll-to]="'#my-about'">About me</button>
+  <button mat-menu-item [ngx-scroll-to]="'#my-sports'">Sport Tables</button>
+  <button mat-menu-item [ngx-scroll-to]="'#my-apis'">APIs</button>
 </mat-menu>

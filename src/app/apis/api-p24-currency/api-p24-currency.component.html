@@ -1,52 +1,40 @@
-<!-- <p>
-  {{currency$ | async | json}}
-</p>
 
-  <div>
-    <mat-card>
-        <mat-card-header>
-          <mat-card-title>Currency</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <mat-table #table [dataSource]="currency$">
-          
-              <ng-container matColumnDef="ccy">
-                  <mat-header-cell *matHeaderCellDef> Ccy </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{ element.ccy }} </mat-cell>
-              </ng-container>
+<!-- <mat-table #table [dataSource]="currency">
 
-              <ng-container matColumnDef="buy">
-                <mat-header-cell *matHeaderCellDef> Buy </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{ element.buy }} </mat-cell>
-              </ng-container>
-          
-              <ng-container matColumnDef="sale">
-                <mat-header-cell *matHeaderCellDef> Sale </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{ element.sale }} </mat-cell>
-              </ng-container>
-          
-          
-              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-            </mat-table>
-        <table>
-              <thead>
-                <tr>
-                  <th>CCY</th>
-                  <th>SALE</th>
-                  <th>BUY</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let ccy of currency$ | async">
-                  <td>{{ ccy.ccy }}</td>
-                  <td>{{ ccy.buy }}</td>
-                  <td>{{ ccy.sale }}</td>
-                </tr>
-              </tbody>
-            </table> 
-        </mat-card-content>
-      </mat-card>
-  </div> -->
+    <ng-container matColumnDef="ccy">
+      <mat-header-cell *matHeaderCellDef> Ccy </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.ccy }} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="buy">
+      <mat-header-cell *matHeaderCellDef> Buy </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.buy }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="sale">
+        <mat-header-cell *matHeaderCellDef> Sale </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.sale }} </mat-cell>
+      </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table> -->
+
+<table cellspacing="0" matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th mat-sort-header="ccy">Ccy</th>
+      <th mat-sort-header="buy">Buy</th>
+      <th mat-sort-header="sale">Sale</th>
+    </tr>
   
+    <tr *ngFor="let ccy of sortedData">
+      <td>{{ ccy.ccy }}</td>
+      <td>{{ ccy.buy }}</td>
+      <td>{{ ccy.sale }}</td>
+    </tr>
+  </table>
+
+
 

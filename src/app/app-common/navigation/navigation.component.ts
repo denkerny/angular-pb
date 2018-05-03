@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
+  themeClass = localStorage.getItem('classNameOfTheme');
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeTheme(theme){
+    this.themeClass = theme
+    localStorage.setItem('classNameOfTheme', theme)
   }
 
 }

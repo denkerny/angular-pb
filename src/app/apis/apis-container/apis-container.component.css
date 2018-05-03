@@ -1,0 +1,17 @@
+.apis-wrapper{
+    padding: 0 20px 20px;
+    background: url('https://psm7.com/wp-content/uploads/2017/07/dsc_0301.jpg') no-repeat center 100%;
+    background-size: cover;
+}
+
+    mat-card{
+        opacity: 0.8
+    }
+    mat-card-title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    h1{
+        font-family: 'Titan One', cursive;
+        color: rgb(13, 14, 13);
+    }

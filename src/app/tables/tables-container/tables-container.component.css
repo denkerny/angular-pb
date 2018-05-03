@@ -1,7 +1,16 @@
 .wrapper-container{
-    background-color: rgb(117, 158, 212);
+    background: url('https://vignette.wikia.nocookie.net/steamtradingcards/images/9/99/Football_Manager_2013_Background_Shot.jpg/revision/latest?cb=20141015014528') no-repeat center center;
+    background-size: cover;
     padding: 0 20px 30px;
+    background-attachment: fixed;
+}
+mat-card{
+    background-color: honeydew ;
+}
+mat-card-title{
+    font-family: 'Skranji', cursive;
 }
 h1{
     font-family: 'Titan One', cursive;
+    color: honeydew;
 }

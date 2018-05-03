@@ -1,0 +1,9 @@
+table{
+    background-color: honeydew;
+    width: 100%;
+    min-width: 100%;
+}
+tr:nth-child(even){
+    background-color: rgb(212, 212, 212);
+    
+}

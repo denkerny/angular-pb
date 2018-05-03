@@ -1,5 +1,6 @@
-
-<app-navigation></app-navigation>
-<app-about-me-container></app-about-me-container>
-<app-tables-container></app-tables-container>
-<app-apis-container></app-apis-container>
+<div [ngClass]="navigation.themeClass">
+    <app-navigation #navigation></app-navigation>
+    <app-about-me-container></app-about-me-container>
+    <app-tables-container></app-tables-container>
+    <app-apis-container></app-apis-container>
+</div>
